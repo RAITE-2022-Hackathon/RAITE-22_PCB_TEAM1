@@ -123,7 +123,49 @@
   </button>
 </div>
 <br><br>
-
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "description": "",
+      "proName": "CRYPTOCAP:BTC"
+    },
+    {
+      "description": "",
+      "proName": "CRYPTOCAP:XRP"
+    },
+    {
+      "description": "",
+      "proName": "CRYPTOCAP:ETH"
+    },
+    {
+      "description": "",
+      "proName": "BINANCE:ETHUSDT"
+    },
+    {
+      "description": "",
+      "proName": "BINANCE:BNBBUSD"
+    },
+    {
+      "description": "",
+      "proName": "FTX:SOLUSD"
+    },
+    {
+      "description": "",
+      "proName": "BINANCE:DOGEUSDT"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "light",
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
     </section>
     <section id="what">
       <center>
@@ -172,18 +214,6 @@
         <div class="container-fluid">
   <div class="px-lg-5">
 
-    <!-- For demo purpose -->
-    <div class="row py-5">
-      <div class="col-lg-12 mx-auto">
-        <div class="text-white p-5 shadow-sm rounded banner">
-          <h1 class="display-4">Looking for a Gadgets</h1>
-          <p class="lead">Summer Gadgets that Perfect for Outings</p>
-          <p class="lead">Now for as low <strong>20% Discount</strong>
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- End -->
 
     <div class="row">
       <!-- Gallery item -->
