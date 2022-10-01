@@ -33,7 +33,8 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        Kshiti Ghelani
+                                        <span><?php echo $_SESSION['username'];?></span>
+                                        <?php if (isset($_SESSION["username"])):?>
                                     </h5>
                                     <h6>
                                         Web Developer and Designer
