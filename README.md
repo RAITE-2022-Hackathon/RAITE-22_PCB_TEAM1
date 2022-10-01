@@ -3,6 +3,7 @@
 Needed: <br>
 Software: PHP 8 XAMPP 3.3.0 <br>
 SMS Gateway.me/register <br>
+Winrar or any type of software that can extract<br>
 
 
 Download our file then extract to your xammp/htdocs<br>
