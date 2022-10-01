@@ -34,10 +34,10 @@
                         <div class="profile-head">
                                     <h5>
                                         <span><?php echo $_SESSION['username'];?></span>
-                                        <?php if (isset($_SESSION["username"])):?>
+
                                     </h5>
                                     <h6>
-                                        Web Developer and Designer
+                                        User ID:
                                     </h6>
                                     <p class="proile-rating">RANKINGS : <span>8/10</span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
