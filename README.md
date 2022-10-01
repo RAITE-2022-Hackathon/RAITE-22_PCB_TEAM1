@@ -4,6 +4,7 @@ Needed:
 Software: PHP 8 XAMPP 3.3.0
 SMS Gateway.me/register
 
+
 Download our file then extract to your xammp/htdocs
 Open Xampp then start apache and mysql
 Click admin of mysql
