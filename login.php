@@ -70,7 +70,7 @@
       <!-- Default form login -->
       <form action="login.php" method="POST">
         
-  
+  <!---->
   <!--Login with Social Media Buttons-->
   <br><br><br><br><br>
   <p class="h4 mb-4 text-center signintext top"><span class="fa fa-user"></span> <strong>LOG IN</strong></p>
