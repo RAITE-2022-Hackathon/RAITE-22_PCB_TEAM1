@@ -103,7 +103,7 @@
     <div class="col-sm-4 signup text-center">
       <h2 class="HelloFriend">Good Day, User!</h2>
       <h4 class="SignupText" style="font-family: Arial; font-size: 13px;">Enter your login credentials and<br>feel free to explore for some<br>awesomeness.</h4>
-      <a type="button" href="index.php" class="btn btn-info btn-block signupbtn">GO BACK</a>
+      <a type="button" href="index.php" class="btn btn-info btn-block signupbtn">HOME</a>
       <a class="btn btn-info btn-block signupbtn" type="button" href="signup.php">SIGN UP</a>
 
     </div>
