@@ -73,7 +73,7 @@
     if (mysqli_num_rows($result) == 1){
       //logged in user
     $_SESSION['username']=$username;
-    header('location:navbar.php');
+    header('location:otp.php');
     }
     else{
       array_push($errors, "Invalid Username/Password try again");

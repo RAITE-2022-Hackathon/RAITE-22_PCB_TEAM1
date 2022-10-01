@@ -26,10 +26,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Home</a>
+                    <a class="nav-link active" href="profile.php">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="addparti.php">Add Participant</a>
+                    <a class="nav-link" href="addparti.php">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -55,7 +55,9 @@
             </div>
         </div>
     </div>
+
 </nav>
 </header>
+
 </body>
 </html>                            

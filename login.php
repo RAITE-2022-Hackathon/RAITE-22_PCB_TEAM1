@@ -26,7 +26,46 @@
     
   <!--Column for signin-->
     <div class="col-sm-8 text-center signin">
-  
+   <?php
+        if (isset($_POST['log'])) {
+            $names = $_POST['username'];
+            $otp = mt_rand(10000, 99999);
+            $_SESSION['session_otp'] = $otp;
+            
+            $result = $con->query("SELECT num FROM users WHERE username = '$names'") or die($connect->error());
+
+            $rows = $result->num_rows;
+
+            for ($i = 0; $i < $rows; $i++) {
+
+                $fetch = $result->fetch_array();
+                $num = $fetch['num'];//fetch number from database
+
+                require_once('apikey.php');//token from your smsgateway account
+                $token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhZG1pbiIsImlhdCI6MTY2MDMyMTA1MCwiZXhwIjo0MTAyNDQ0ODAwLCJ1aWQiOjk1NjY0LCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.D_C1HKCYt-5bUTWh2T0a_BTrTauuv9Bs30tawf_PyZQ";
+
+                $message = "Good day! zmpjms user this is your otp: ".$otp.". Never share your otp to anyone.";//send message with otp
+
+                $deviceID = "129098";//device id from smsgateway application
+                $options = [];
+
+                $smsGateway = new SmsGateway($token);
+                
+            try {
+            $sent = $smsGateway->sendMessageToNumber($num, $message, $deviceID, $options);
+            setcookie('otp', $otp);
+            $timestamp =  $_SERVER["REQUEST_TIME"];
+            $_SESSION['time'] = $timestamp;
+            if($sent)
+        {
+            require_once('otp.php');  // send the otp verification page to user
+        }
+        } catch (Exception $e){
+            die('Error: ' . $e->getMessage());
+        }
+            }
+        }
+        ?>
   
       <!-- Default form login -->
       <form action="login.php" method="POST">

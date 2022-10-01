@@ -26,37 +26,20 @@
     });
 
   </script>
-  <script>
-   
-const getBtcData = async () => {
-   fetch('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    document.getElementById("info").innerHTML = '<p>$' + data.USD + '</p>'
-  });
-}
-getBtcData();
-const getEthData = async () => {
-   fetch('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=EUR')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    document.getElementById("infoEth").innerHTML = '<p>$' + data.EUR + '</p>'
-  });
-}
-getEthData();
+  
 
-
-
-  </script>
  <script type="text/javascript">
             $(document).on('click', 'li a',function(){
                 $(this).addClass('active').siblings().removeClass('active')
             })
 
         </script>
- 
+ <style type="text/css">
+   .symbol{
+  width: 80px;
+  text-transform: uppercase;
+}
+ </style>
  
 </head> 
 <body>
@@ -74,7 +57,7 @@ getEthData();
                     <a class="nav-link active" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#what">What's New</a>
+                    <a class="nav-link" href="#what">Track</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#gallery">Gallery</a>
@@ -152,228 +135,29 @@ getEthData();
         <table id="myTable" class="table table-striped table-light table-responsive" style="width:100%">
         <thead>
             <tr>
-                <th>#Coin</th>
-                <th>Price</th>
-                <th>1h</th>
-                <th>24h</th>
-                <th>7d</th>
-                <th>24h Volume</th>
-                <th>Market Cap</th>
-                <th>Last 7days</th>
+               <th class="rank"><abbr title="Position">Rank</abbr></th>
+                <th class="name">Name</th>
+                <th class="symbol">Symbol</th>
+                <th class="price">Price(USD)</th>
+                <th class="market_cap">Market Cap</th>
+                <th class="circulating_supply">Circulating Supply</th>
+                <th class="volume_24h">Volume(24h)</th>
+                <th class="percent_change_24h">24h %</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-              <td>Bitcoin</td>
-              <td class="col"><p id="info"></p></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Ethereum</td>
-              <td class="col"><p id="infoEth"></p></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Tether</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>USD Coin</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>BNB</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>XRP</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Binance USD</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Cardano</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Solana</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Dogecoin</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Shiba Inu</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Dai</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Lido Staked Ether</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Polygon</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Chain</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>TRON</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Avalanche</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Uniswap</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>Wrap Bitcoin</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
-            <tr>
-              <td>OKB</td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-              <td class="col"></td>
-            </tr>
+        <tbody id="cryptocurrencies">
+           
         </tbody>
         <tfoot>
             <tr>
-                <th>#Coin</th>
-                <th>Price</th>
-                <th>1h</th>
-                <th>24h</th>
-                <th>7d</th>
-                <th>24h Volume</th>
-                <th>Market Cap</th>
-                <th>Last 7days</th>
+                <th class="rank"><abbr title="Position">Rank</abbr></th>
+                <th class="name">Name</th>
+                <th class="symbol">Symbol</th>
+                <th class="price">Price(USD)</th>
+                <th class="market_cap">Market Cap</th>
+                <th class="circulating_supply">Circulating Supply</th>
+                <th class="volume_24h">Volume(24h)</th>
+                <th class="percent_change_24h">24h %</th>
             </tr>
         </tfoot>
     </table>
@@ -700,4 +484,126 @@ getEthData();
   <!-- Footer -->
 
 </body>
+<script>
+   var xhReq = new XMLHttpRequest();
+        xhReq.open("GET", "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd", false);
+        xhReq.send(null);
+        var data = JSON.parse(xhReq.responseText); 
+
+        // initialization
+        var cryptocurrencies;
+        var timerId;
+        var updateInterval = 30000;
+
+
+        function ascending(a, b) { return a.percent_change_24h > b.percent_change_24h ? 1 : -1; }
+        function descending(a, b) { return a.percent_change_24h < b.percent_change_24h ? 1 : -1; }
+        function reposition() {
+            var height = $("#cryptocurrencies .cryptocurrency").height();
+            var y = height;
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.css("top", y + "px");
+                y += height;      
+            }
+        }  
+        function updateRanks(cryptocurrencies) {
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                cryptocurrencies[i].$item.find(".rank").text(i + 1);  
+            }
+        }
+
+        function fetchNewData(data,attributeName,name){
+            for(var x in data){
+                if((data[x].name == name) == true) {
+                    return data[x][attributeName];
+                }
+            }
+            return null;
+        }        
+        function updateBoard() {
+            var cryptocurrency = getRandomCoin(); 
+            cryptocurrency.percent_change_24h += getRandomScoreIncrease();
+            cryptocurrency.$item.find(".percent_change_24h").text(cryptocurrency.percent_change_24h);
+            cryptocurrencies.sort(descending);
+            updateRanks(cryptocurrencies);
+            reposition();
+        }
+
+        function getNewData(){
+            // get the new data for each coin and change to their new values
+            var newReq = new XMLHttpRequest();
+            newReq.open("GET", "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd", false);
+            newReq.send(null);
+            var newData = JSON.parse(newReq.responseText); 
+
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                var cryptocurrency = cryptocurrencies[i];
+                cryptocurrency.price = fetchNewData(newData,'current_price',cryptocurrency.name);
+                cryptocurrency.$item.find(".price").text(cryptocurrency.price);
+                cryptocurrency.volume_24h = fetchNewData(newData,'total_volume',cryptocurrency.name);
+                cryptocurrency.$item.find(".volume_24h").text(cryptocurrency.volume_24h);
+                cryptocurrency.percent_change_24h = fetchNewData(newData,'market_cap_change_percentage_24h',cryptocurrency.name);
+                cryptocurrency.$item.find(".percent_change_24h").text(cryptocurrency.percent_change_24h);
+            }
+            cryptocurrencies.sort(descending);
+            updateRanks(cryptocurrencies);
+            reposition();
+            console.log('Finished retrieving new data');
+            
+        }
+        function getRandomScoreIncrease() {
+            return getRandomBetween(50, 150);
+        }
+        function getRandomBetween(minimum, maximum) {
+                return Math.floor(Math.random() * maximum) + minimum;
+        }
+        function resetBoard() {
+            var $list = $("#cryptocurrencies");
+            $list.find(".cryptocurrency").remove();
+            if(timerId !== undefined) {
+                clearInterval(timerId);
+            }
+            cryptocurrencies = [];
+            for(let i = 0;i < 25;i++){
+                cryptocurrencies.push(
+                    {
+                        name : data[i].name,
+                        symbol: data[i].symbol,
+                        price: data[i].current_price,
+                        market_cap: data[i].market_cap,
+                        circulating_supply: Math.round(data[i].circulating_supply),
+                        volume_24h: data[i].total_volume,
+                        percent_change_24h: data[i].market_cap_change_percentage_24h,
+                    }
+                )
+            }
+            
+            for(var i = 0; i < cryptocurrencies.length; i++) {
+                var $item = $(
+                    "<tr class='cryptocurrency'>" + 
+                        "<th class='rank'>" + (i + 1) + "</th>" + 
+                        "<td class='name'>" + cryptocurrencies[i].name + "</td>" + 
+                        "<td class='symbol'>" + cryptocurrencies[i].symbol + "</td>" + 
+                        "<td class='price'>" +"$"+ cryptocurrencies[i].price + "</td>" + 
+                        "<td class='market_cap'>" + cryptocurrencies[i].market_cap + "</td>" + 
+                        "<td class='circulating_supply'>" + cryptocurrencies[i].circulating_supply + "</td>" + 
+                        "<td class='volume_24h'>" + cryptocurrencies[i].volume_24h + "</td>" + 
+                        "<td class='percent_change_24h'>" + cryptocurrencies[i].percent_change_24h + "</td>" +
+                    "</tr>"
+                );
+
+                cryptocurrencies[i].$item = $item;
+                $list.append($item);
+            }
+            cryptocurrencies.sort(descending);
+            updateRanks(cryptocurrencies);
+            reposition();
+            
+            // fetch new data for the updateInterval
+            timerId = setInterval("getNewData();", updateInterval);
+
+        } 
+        resetBoard();
+        
+    </script>
 </html>                            
