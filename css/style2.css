@@ -1,0 +1,74 @@
+body{
+    background-color: #eeee;
+  padding: 0px;
+  margin: 0px;
+}
+.custom-nav{
+ background: linear-gradient(270deg,#3aa57f,#5cc877);
+
+}
+
+.footer{
+    background: #eee;
+}
+.carousel-indicators .active{background-color: #3aa57f;}
+.carousel-indicators li{border: 1px solid #5cc877;}
+.carousel-indicators{bottom: -180px;}
+.car{
+    bottom: -5px;
+}
+.custom-badge{
+
+      background-color: #343a40!important;
+    color: #fff;
+    font-size: 11px;
+    padding: 5px;
+    padding-left: 11px;
+    padding-right: 11px;
+    border-radius: 7px;
+}
+
+
+.card{
+
+  border:none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+
+.time i{
+
+  color: #cacacaa3;
+}
+.banner {
+  background: #a770ef;
+ background: linear-gradient(109.6deg, rgb(255, 194, 48) 11.2%, rgb(255, 124, 0) 100.2%);
+}
+.custom-scrollbar-js,
+.custom-scrollbar-css {
+  height: 200px;
+}
+
+
+/* Custom Scrollbar using CSS */
+.custom-scrollbar-css {
+  overflow-y: scroll;
+}
+
+/* scrollbar width */
+.custom-scrollbar-css::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* scrollbar track */
+.custom-scrollbar-css::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+/* scrollbar handle */
+.custom-scrollbar-css::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #00d2ff;
+  background: linear-gradient(to bottom,#3aa57f,#5cc877);
+}
